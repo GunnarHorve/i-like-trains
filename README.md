@@ -1,3 +1,7 @@
+# i-like-trains
+[![Build Status](https://travis-ci.com/GunnarHorve/i-like-trains.svg?branch=master)](https://travis-ci.com/GunnarHorve/i-like-trains)
+this project is [built by travis-ci](https://travis-ci.com/github/GunnarHorve/i-like-trains) and deployed to [https://gunnarhorve.github.io/i-like-trains/](https://gunnarhorve.github.io/i-like-trains/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
