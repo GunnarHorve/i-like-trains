@@ -12,7 +12,7 @@ class Route extends React.Component {
   componentDidMount() {
     list_route_stops(this.props.route_id).then(stops => {
       this.setState({stops: stops});
-      this.props.handleStopSelect(stops.length > 0 ? stops[0].id : "")
+      this.props.handleStopSelect(stops.length > 0 ? stops[0] : {})
     });
   }
 
@@ -20,13 +20,13 @@ class Route extends React.Component {
     if (prevProps.route_id === this.props.route_id) return;
     list_route_stops(this.props.route_id).then(stops => {
       this.setState({stops: stops})
-      this.props.handleStopSelect(stops.length > 0 ? stops[0].id : "")
+      this.props.handleStopSelect(stops.length > 0 ? stops[0] : {})
     });
   }
 
   handleStopSelect(selected_stop_idx) {
     this.setState({selected_stop_idx: selected_stop_idx});
-    this.props.handleStopSelect(this.state.stops[selected_stop_idx].id);
+    this.props.handleStopSelect(this.state.stops[selected_stop_idx]);
   }
 
   render() {

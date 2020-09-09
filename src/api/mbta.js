@@ -15,7 +15,7 @@ function list_route_stops(route_id) {
   }}).then(response => response.data.data);
 }
 
-function list_scheduled_departures(stop) {
+function list_scheduled_departures(stop, routes) {
   var now = new Date();
 
   return axios.get(`${baseurl}/schedules`, { params: {
@@ -24,6 +24,7 @@ function list_scheduled_departures(stop) {
     'page[limit]': '10',
     'filter[date]': moment(now).format("YYYY-MM-DD"),
     'filter[min_time]': moment(now).format("HH:mm"),
+    'filter[route]': routes.map(route => route.id).join(','),
     'include': 'stop,trip,prediction,route'
   }}).then(response => response.data.data);
 }

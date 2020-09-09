@@ -11,6 +11,10 @@
   margin: 0;
 }
 
+.time-display {
+  text-align: right;
+}
+
 #schedule {
   padding: 1em;
   border: 1px solid;

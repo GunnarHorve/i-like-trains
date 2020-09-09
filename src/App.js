@@ -22,11 +22,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    list_commuter_rail_routes().then(routes => this.setState({routes: routes, selected_route: routes[0].id}));
+    list_commuter_rail_routes().then(routes => this.setState({routes: routes, selected_route: routes[0]}));
   }
 
   handleRouteSelect(selected_route) {
-    this.setState({selected_route: selected_route.value.id, selected_route_idx: selected_route.value.idx});
+    this.setState({selected_route: selected_route.value.route, selected_route_idx: selected_route.value.idx});
   }
 
   handleStopSelect(selected_stop) {
@@ -35,7 +35,7 @@ class App extends React.Component {
 
   render() {
     const route_options = this.state.routes.map((route, idx) => (
-      {value: {id: route.id, idx: idx}, label: route.attributes.long_name}
+      {value: {route: route, idx: idx}, label: route.attributes.long_name}
     ));
 
     const active_route = route_options.length > 0 ? route_options[this.state.selected_route_idx].label : "loading";
@@ -44,12 +44,15 @@ class App extends React.Component {
       <div id="route-manager">
         <Dropdown options={route_options} onChange={this._handleRouteSelect} value={active_route}/>
         {this.state.selected_route !== "" ?
-          <Route handleStopSelect={(stop) => this.handleStopSelect(stop)} route_id={this.state.selected_route}/>
+          <Route handleStopSelect={(stop) => this.handleStopSelect(stop)} route_id={this.state.selected_route.id}/>
           : <div/>
         }
       </div>
       <div id="schedule-manager">
-        {this.state.selected_stop !== "" ? <Schedule stop_id={this.state.selected_stop}/> : <div/>}
+        {this.state.selected_stop !== "" ?
+          <Schedule stop={this.state.selected_stop} route={this.state.selected_route} routes={this.state.routes}/>
+          : <div/>
+        }
       </div>
       <div/>
 
