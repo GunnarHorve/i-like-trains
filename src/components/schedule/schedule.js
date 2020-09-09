@@ -23,7 +23,7 @@ class Schedule extends React.Component {
     console.log(this.state.departures);
 
     const departures = this.state.departures.map((departure, idx) => {
-      if (!departure.attributes.departure_time) return;
+      if (!departure.attributes.departure_time) return null;
 
       var matching_route = this.props.routes.find(route => route.id === departure.relationships.route.data.id);
 
