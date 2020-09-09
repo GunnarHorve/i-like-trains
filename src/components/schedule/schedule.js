@@ -4,6 +4,8 @@ import moment from 'moment';
 import './schedule.css';
 import { list_scheduled_departures } from '../../api/mbta.js';
 
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
 class Schedule extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +44,7 @@ class Schedule extends React.Component {
     return (<div id="schedule">
       <div class="schedule-header">
         <div>
-          <h2>Sunday</h2>
+          <h2>{days[(new Date()).getDay()]}</h2>
           <p>{moment(new Date()).format("MM-DD-YYYY")}</p>
         </div>
         <h1>{this.props.stop.attributes.name} Information</h1>
