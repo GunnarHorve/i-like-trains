@@ -1,0 +1,33 @@
+#stop {
+  margin: 1em;
+}
+
+/* stops should display in horizontal lines*/
+.stop-content {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.stop-pip {
+  background-color: #80276C;
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+}
+.stop-label { margin-left: 0.5em; }
+
+/* stops should be joined by vertical linking lines */
+.stop-connector {
+  /* hackish centering to stop-pip */
+  margin-left: calc(1em - 0.1em);
+  width: 0.2em;
+
+  height: 1em;
+  background-color: black;
+}
+
+/* stop hover and selected stylings */
+.stop-content { transition: 0.5s; }
+.stop-content:hover, .stop-content.selected {
+  opacity: 0.5;
+}
