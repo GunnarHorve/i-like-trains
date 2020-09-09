@@ -1,4 +1,5 @@
 import axios from 'axios'
+import moment from 'moment';
 
 const baseurl = 'https://api-v3.mbta.com'
 
@@ -14,10 +15,17 @@ function list_route_stops(route_id) {
   }}).then(response => response.data.data);
 }
 
-function list_stop_shedule(stop) {
+function list_scheduled_departures(stop) {
+  var now = new Date();
+
   return axios.get(`${baseurl}/schedules`, { params: {
-    'filter[stop]': stop
+    'filter[stop]': stop,
+    'sort': 'departure_time',
+    'page[limit]': '10',
+    'filter[date]': moment(now).format("YYYY-MM-DD"),
+    'filter[min_time]': moment(now).format("HH:mm"),
+    'include': 'stop,trip,prediction,route'
   }}).then(response => response.data.data);
 }
 
-export { list_commuter_rail_routes, list_route_stops, list_stop_shedule }
+export { list_commuter_rail_routes, list_route_stops, list_scheduled_departures }

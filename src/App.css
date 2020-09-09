@@ -1,3 +1,15 @@
 #app {
   display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+#route-manager {
+  max-height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid;
+}
+
+#schedule-manager {
+  align-self: center;
 }

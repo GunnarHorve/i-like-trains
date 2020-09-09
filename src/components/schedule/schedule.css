@@ -1,0 +1,20 @@
+/* misc. header alignments */
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+}
+.schedule-header > h1 {
+  margin: 1em;
+  margin-top: 0;
+}
+.schedule-header p, .schedule-header h2 {
+  margin: 0;
+}
+
+#schedule {
+  padding: 1em;
+  border: 1px solid;
+}
+
+/* misc. table alignments */
+td, th { padding-left: 1em; }

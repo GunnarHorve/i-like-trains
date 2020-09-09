@@ -1,0 +1,21 @@
+#logo-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+#logo-bar img {
+  width: 75px;
+  cursor: pointer;
+
+  margin-top: 0;
+  transition: 0.25s;
+}
+
+#logo-bar:hover img {
+  margin-top: 0.5em;
+}
