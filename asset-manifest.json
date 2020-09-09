@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/i-like-trains/static/css/main.1f5371ea.chunk.css",
+    "main.js": "/i-like-trains/static/js/main.03471ca0.chunk.js",
+    "main.js.map": "/i-like-trains/static/js/main.03471ca0.chunk.js.map",
+    "runtime-main.js": "/i-like-trains/static/js/runtime-main.6bcae63a.js",
+    "runtime-main.js.map": "/i-like-trains/static/js/runtime-main.6bcae63a.js.map",
+    "static/css/2.ee241de9.chunk.css": "/i-like-trains/static/css/2.ee241de9.chunk.css",
+    "static/js/2.1b573f54.chunk.js": "/i-like-trains/static/js/2.1b573f54.chunk.js",
+    "static/js/2.1b573f54.chunk.js.map": "/i-like-trains/static/js/2.1b573f54.chunk.js.map",
+    "index.html": "/i-like-trains/index.html",
+    "precache-manifest.4301dbaafc46cff37df2ad12044af2e4.js": "/i-like-trains/precache-manifest.4301dbaafc46cff37df2ad12044af2e4.js",
+    "service-worker.js": "/i-like-trains/service-worker.js",
+    "static/css/2.ee241de9.chunk.css.map": "/i-like-trains/static/css/2.ee241de9.chunk.css.map",
+    "static/css/main.1f5371ea.chunk.css.map": "/i-like-trains/static/css/main.1f5371ea.chunk.css.map",
+    "static/js/2.1b573f54.chunk.js.LICENSE.txt": "/i-like-trains/static/js/2.1b573f54.chunk.js.LICENSE.txt",
+    "static/media/github.svg": "/i-like-trains/static/media/github.3bd240d1.svg",
+    "static/media/mbta.svg": "/i-like-trains/static/media/mbta.c5e2949f.svg",
+    "static/media/react.svg": "/i-like-trains/static/media/react.5d5d9eef.svg",
+    "static/media/travis.svg": "/i-like-trains/static/media/travis.4f9df7d6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6bcae63a.js",
+    "static/css/2.ee241de9.chunk.css",
+    "static/js/2.1b573f54.chunk.js",
+    "static/css/main.1f5371ea.chunk.css",
+    "static/js/main.03471ca0.chunk.js"
+  ]
+}
